@@ -180,7 +180,7 @@ namespace Lab5
                 string secondString = txtString2.Text;
                 Swap(ref firstString, ref secondString);
                 txtString1.Text = firstString;
-                txtString2.Text = secondString
+                txtString2.Text = secondString;
                 lblResults.Text = "";
                 lblResults.Text += "Strings have been swapped!\n";
             }
@@ -205,7 +205,7 @@ namespace Lab5
         private void btnAnalyze_Click(object sender, EventArgs e)
         //Checks if there is data in the text boxes, then provides user data on how many characters are in each string
         {
-            bool testData = Checkinput();
+            bool testData = CheckInput();
 
             if (testData)
             {
@@ -224,7 +224,7 @@ namespace Lab5
         {
             Random rand = new Random(733);
             lstNumbers.Items.Clear();
-            for (int i = 0; i > numTotal.Value; i++)
+            for (int i = 0; i < numTotal.Value; i++)
             {
                 lstNumbers.Items.Add(rand.Next(1000, 5000 + 1));
             }
